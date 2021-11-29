@@ -8,6 +8,9 @@ main.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-msp430_20.2.5.LTS/include/intr
 main.obj: C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-msp430_20.2.5.LTS/include/intrinsics_legacy_undefs.h
 main.obj: C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/HAL/hal_general.h
 main.obj: C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/HAL/hal_gpio.h
+main.obj: C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/Driver/driver_general.h
+main.obj: C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/HAL/hal_usciB1.h
+main.obj: C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/Driver/driver_aktorik.h
 
 ../main.c:
 
@@ -24,4 +27,10 @@ C:/ti/ccs1040/ccs/tools/compiler/ti-cgt-msp430_20.2.5.LTS/include/intrinsics_leg
 C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/HAL/hal_general.h:
 
 C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/HAL/hal_gpio.h:
+
+C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/Driver/driver_general.h:
+
+C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/HAL/hal_usciB1.h:
+
+C:/Users/andrG/Desktop/FH/3.\ Semester/ES/Lab1/Driver/driver_aktorik.h:
 

@@ -4,5 +4,6 @@
 
 void Driver_Init ()
 {
-
+    Driver_SetSteering();
+    Driver_SetThrottle();
 }

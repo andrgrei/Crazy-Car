@@ -51,9 +51,7 @@
 #define LINE_FOLLOW_4       BIT6        // in
 #define LINE_FOLLOW_5       BIT7        // in
 
-//P4DIR = 8(1b0);
-//P4REN = 8b00000111;
-//P4OUT
+
 
 // ------------------------ Port 5 -------------------------
 //        XX                BIT0        // locked R
@@ -65,9 +63,6 @@
 //        XX                BIT6        // locked R
 //        XX                BIT7        // locked R
 
-//P5DIR = 8(1b0);
-//P5REN = 8(1b1);
-//P5OUT =
 
 
 // ------------------------ Port 6 -------------------------
@@ -80,9 +75,6 @@
 //        XX                BIT6        // locked R
 //        XX                BIT7        // locked R
 
-//P6DIR = 8b(1b0);
-//P6REN = 8b11100000;
-//P6OUT =
 
 // ------------------------ Port 7 -------------------------
 //        XX                BIT0        // N/A
@@ -94,9 +86,6 @@
 //        XX                BIT6        // locked R
 //        XX                BIT7        // locked R
 
-//P7DIR = 8b(1b0);
-//P7REN = 8b11100000;
-//P6OUT = 8bxxxxxxxx;
 
 // ------------------------ Port 8 -------------------------
 #define LCD_BL              BIT0        // out
@@ -106,9 +95,9 @@
 #define LCD_SPI_CLK         BIT4        // out
 #define LCD_SPI_MOSI        BIT5        // out
 #define LCD_SPI_MISO        BIT6        // in
-#define LCD_DATA_CMD        BIT7        // out
+#define LCD_DATACMD        BIT7        // out
 
-//P2DIR = 8b10xxxx0;
+
 
 // ------------------------ Port 9 -------------------------
 #define LCD_RESET           BIT0        // out

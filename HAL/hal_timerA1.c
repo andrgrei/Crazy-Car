@@ -1,12 +1,12 @@
 #include "hal_timerA1.h"
 #include <msp430.h>
 
-int throttle_counter = 0;
+int throttle_cnt = 0;
 
 void HAL_TimerA1_Init()
 {
 
-    //TTA1CCTL0 |= CCIE;
+    TA1CCTL0 |= CCIE;
     TA1CTL   |= MC_1;        // UpMode
     TA1CTL   |= TASSEL_2;    // source SubMasterCLK
 
@@ -28,10 +28,18 @@ void HAL_TimerA1_Init()
 
 }
 
+/*void createPulse (PWM, num_Pulse);
+{
+    throttle_cnt = 0;
+    TA1CCR1 = PWM;
+    while (throttle_cnt < num_Pulse)
+}
+*/
+
 #pragma vector = TIMER1_A0_VECTOR
 __interrupt void Timer_A1 (void)
 {
-    throttle_counter ++;
+    throttle_cnt ++;
 }
 
 

@@ -88,8 +88,13 @@ void HAL_GPIO_Init()
 
     //                      ---------- Port 8 ----------
     //P7DIR = 8b10110111;
-    P7DIR &= ~UART_RXD_AUX;
-    P7DIR &= ~LCD_SPI_MISO;
+    P8DIR |= (LCD_BL | LCD_SPI_CS | UART_TXD_AUX | LCD_SPI_CLK | LCD_SPI_MOSI | LCD_DATACMD);
+    P8DIR &= ~UART_RXD_AUX;
+    P8DIR &= ~LCD_SPI_MISO;
+    P8SEL |= (LCD_SPI_MISO | LCD_SPI_CLK | LCD_SPI_MOSI);
+
+
+
 
     //                      ---------- Port 9 ----------
     //P9DIR = 8b11111111;
@@ -116,6 +121,9 @@ __interrupt void P1_ISR(void)
                     P1IFG &= ~STOP_BUTTON;
                 }
         break;
+        default:
+            P1IFG = 0x00;
+            break;
 
     }
 }

@@ -12,7 +12,7 @@
 
 ButtonCom test;
 
-USCIB1_SPICom TxBUF;
+USCIB1_SPICom transmit;
 
 void HAL_Init()
 {
@@ -22,7 +22,7 @@ void HAL_Init()
     HAL_UCS_Init();
     HAL_TimerA1_Init();
     HAL_USCIB1_Init();
-    HAL_USCIB1_Transmit();
+//    HAL_USCIB1_Transmit();
 
     __enable_interrupt();
 

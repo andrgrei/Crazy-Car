@@ -3,9 +3,12 @@
 #include <hal_gpio.h>
 #include <driver_general.h>
 #include <hal_usciB1.h>
+#include <driver_aktorik.h>
 
 extern ButtonCom test;
-extern USCIB1_SPICom TxBUF;
+extern USCIB1_SPICom transmit;
+
+int LCD_Input = 1;
 
 
 // Steering
@@ -14,11 +17,10 @@ extern USCIB1_SPICom TxBUF;
 #define RIGHT_MAX 4750 //1,9ms
 
 // Throttle
-#define MAX_RPW 2500    //Max Reverse 1ms
-#define MIN_RPW 5000    //Min Reverse 2ms
-#define MAX_FPW 7500    //Max Forward 3ms
-#define MIN_RPW 10000   //Min Forward 4ms
-
+//#define MAX_RPW 2500    //Max Reverse 1ms
+//#define MIN_RPW 5000    //Min Reverse 2ms
+//#define MAX_FPW 7500    //Max Forward 3ms
+//#define MIN_RPW 10000   //Min Forward 4ms
 
 // Frquency
 #define XTAL_FREQU  20000000 //20MHz
@@ -30,7 +32,20 @@ void main(void)
 {
     HAL_Init();
 
-    Driver_SetThrottle();
+    Driver_Init();
+//    transmit.Status.B.TxSuc = 1;
+//
+//    while (1)
+//    {
+//        if (transmit.Status.B.TxSuc == 1)
+//        transmit.TxData.Data[0] = 10;
+//        transmit.TxData.Data[1] = 7;
+//
+//
+//        HAL_USCIB1_Transmit (LCD_Input);
+//    }
+
+    //void HAL_USCIB1_Transmit (char LCD_Input);
 
     /*while(1)
     {
